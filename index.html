@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>UKG Story Workbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="controls">
+        <button class="btn btn-prev" onclick="nav(-1)">⬅ Prev</button>
+        <div class="badge" id="pageBadge">1 / 120</div>
+        <button class="btn btn-next" onclick="nav(1)">Next ➡</button>
+        <button class="btn btn-speak" onclick="speak()">🔊 Read</button>
+    </div>
+
+    <div class="sheet-wrapper">
+        <div class="sheet" id="sheetFrame">
+            <div class="header-info">
+                <span>Name: <input class="input-line"></span>
+                <span>Date: <input class="input-line" style="width:80px;"></span>
+            </div>
+
+            <div class="title-banner" id="storyTitle">Title Loading...</div>
+
+            <div class="content-area">
+                <div class="story-text" id="storyBody"></div>
+                <div class="image-box">
+                    <img id="mainImg" class="story-img" src="" alt="Story Image" onerror="backupImg()">
+                </div>
+            </div>
+
+            <div class="questions">
+                <h3>Fill in the blanks:</h3>
+                <div id="qContainer"></div>
+            </div>
+            
+            <div class="footer-tag">
+                UKG Learning • Sheet <span id="sheetNum">1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
